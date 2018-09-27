@@ -83,21 +83,14 @@
         <url>https://junit.ci.cloudbees.com/</url>
     </ciManagement>
     <distributionManagement>
-        <downloadUrl>https://github.com/junit-team/junit4/wiki/Download-and-Install</downloadUrl>
         <snapshotRepository>
-            <id>junit-snapshot-repo</id>
-            <name>Nexus Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>junit-releases-repo</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <site>
-            <id>junit.github.io</id>
-            <url>gitsite:git@github.com/junit-team/junit4.git</url>
-        </site>
+        <id>nexus-snapshots</id>
+        <url>http://nexus:8081/nexus/content/repositories/snapshots</url>
+      </snapshotRepository>
+      <repository>
+          <id>nexus-releases</id>
+          <url>http://nexus:8081/nexus/content/repositories/releases</url>
+      </repository>
     </distributionManagement>
 
     <properties>
